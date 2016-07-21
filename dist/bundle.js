@@ -1,0 +1,1 @@
+"use strict";angular.module("rijksApp",[]),angular.module("rijksApp").controller("mainCtrl",["$scope","mainSvc",function(t,n){t.test="test",t.getArt=function(){n.getArt().then(function(t){console.log(response)})}}]);
