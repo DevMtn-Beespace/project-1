@@ -1,16 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="rijksApp">
+<html ng-app="rijksApp">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./dist/bundle.css">
-  <title>Rijksmuseum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <!-- <link rel="stylesheet" href="./js/galleria/themes/classic/galleria.classic.css"> -->
+    <link rel="stylesheet" href="./dist/bundle.css">
+    <title>Rijksmuseum</title>
 </head>
-<body ng-controller="mainCtrl">
-{{test}}
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-<script src="./dist/bundle.js"></script>
+<body>
 
+
+    <section class="nav">
+        <div><a ui-sref="home">home</a></div>
+        <div><a ui-sref="gallery">gallery</a></div>
+        <div><a ui-sref="about">about</a></div>
+        <!-- <div><a ui-sref="search">search</a></div> -->
+    </section>
+
+    <section class="main">
+        <ui-view></ui-view>
+
+    </section>
+
+    <!-- ANGULAR -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+    <!-- ANGULAR APP -->
+    <!-- <script type="text/javascript"  src="./dist/bundle.js"></script> -->
+    <script type="text/javascript" src="./js/1rijksApp.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/mainSvc.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/routes.js" charset="utf-8"></script>
+
+    <!-- ANGULAR CONTROLLERS -->
+    <script type="text/javascript" src="./js/controllers/mainCtrl.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/controllers/galleryCtrl.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/controllers/searchCtrl.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/controllers/detailsCtrl.js" charset="utf-8"></script>
+
+
+    <!-- ANGULAR DIRECTIVES -->
+    <script type="text/javascript" src="./directives/artObjectDirective.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./directives/toggleDirective.js" charset="utf-8"></script>
+
+    <!-- GALLERIA JS -->
+    <!-- <script type="text/javascript" src="./js/galleria/galleria-1.4.2.min.js"></script> -->
+
+  </body>
 </html>

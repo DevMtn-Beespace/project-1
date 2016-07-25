@@ -1,0 +1,53 @@
+<section>
+    <div class="main-container">
+      <!-- set this to 50% width -->
+        <div class="gallery">
+            <ul>
+                <li>Title: {{data.longTitle}}</li>
+                <img class="main-img" ng-src="{{data.webImage.url}}" alt="">
+                <li><a href={{data.webImage.url}}>Link to large Web image</a></li>
+                <li><a href={{data.links.web}}>link to museum page with image</a></li>
+                <li>{{data.objectNumber}}</li>
+                <li>
+                    <button ng-click=getDetails(data.objectNumber)>Get Details</button>
+                </li>
+                <li>
+                    <button ng-click=getNextObject()>Get Next Image</button>
+                </li>
+                <li>
+                    <button ng-click=getPreviousObject()>Get Previous Image</button>
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+        <!-- set to 50% and load the details  -->
+        <p>{{data.colors}}</p>
+        
+
+
+        </div>
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- <section>
+    <div class="colors">
+        <div ng-repeat="color in colors">
+            <div class="swatch">
+              {{color}}
+
+            </div>
+        </div>
+    </div>
+</section> -->

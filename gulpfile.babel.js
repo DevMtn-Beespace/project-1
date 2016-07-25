@@ -11,8 +11,8 @@ import sass from 'gulp-sass';
 import babel from 'gulp-babel';
 
 const paths = {
-  jsSource: ['./js/rijksApp.js', './js/mainCtrl.js', './js/mainSvc.js',  './js/*.js'],
-  sassSource: ['./styles/*.scss']
+  jsSource: ['./js/**/*.js'],
+  sassSource: ['./styles/**/*.scss']
   // paths: [ path.join(__dirname, 'styles') ]
 };
 const sassOptions = {
@@ -27,10 +27,10 @@ gulp.task('js', () =>  {
   .pipe(babel({
     presets: ["es2015"]
   }))
-  .pipe(concat('bundle.js'))
-  .pipe(annotate())
-  .pipe(uglify())
-  .pipe(gulp.dest('./dist'));
+  // .pipe(concat('bundle.js'))
+  // .pipe(annotate())
+  // .pipe(uglify())
+  .pipe(gulp.dest('./dist/js'));
 });
 
 
@@ -38,7 +38,7 @@ gulp.task('sass', () => {
   return gulp.src(paths.sassSource)
   .pipe(sass(sassOptions).on('error', sass.logError))
   .pipe(concat('bundle.css'))
-  .pipe(gulp.dest('./dist'));
+  .pipe(gulp.dest('./dist/styles'));
 });
 
 gulp.task('watch', () =>  {

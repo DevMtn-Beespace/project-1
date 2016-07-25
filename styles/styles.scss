@@ -1,1 +1,32 @@
+.nav div {
+  display: flex;
+  justify-content: space-around
+}
 
+.main-container {
+  width: 100vw;
+}
+
+
+.gallery {
+  width: 50vw;
+  border: 1px;
+}
+
+.details.btn {
+  position: fixed;
+  top:-20;
+  z-index: 9999
+}
+
+.main-img {
+  width: 40vw;
+
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border: 2px;
+  border-color: black;
+}
