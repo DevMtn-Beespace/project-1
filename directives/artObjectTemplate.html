@@ -1,45 +1,22 @@
 <section>
-    <div class="main-container">
-      <!-- set this to 50% width -->
-        <div class="gallery">
-            <ul>
-                <li>Title: {{data.longTitle}}</li>
-                <img class="main-img" ng-src="{{data.webImage.url}}" alt="">
-                <li><a href={{data.webImage.url}}>Link to large Web image</a></li>
-                <li><a href={{data.links.web}}>link to museum page with image</a></li>
-                <li>{{data.objectNumber}}</li>
-                <li>
-                    <button ng-click=getDetails(data.objectNumber)>Get Details</button>
-                </li>
-                <li>
-                    <button ng-click=getNextObject()>Get Next Image</button>
-                </li>
-                <li>
-                    <button ng-click=getPreviousObject()>Get Previous Image</button>
-                </li>
-            </ul>
+    <div class="gallery-template-container">
+        <div>
+            <img class="left-arrow" ng-click="getPreviousObject()" src="/img/icon-arrow-left.png" alt="arrow-left">
         </div>
-        <div class="details">
-        <!-- set to 50% and load the details  -->
-        <p>{{data.colors}}</p>
-        
-
-
+        <div class="gallery">
+          <img class="main-img" ng-src="{{data.webImage.url}}" alt="{{data.title}}">
+          <h4 class="long-title">Title: {{data.longTitle}}</h4>
+          <!-- <a href={{data.webImage.url}}>Link to large Web image</a> -->
+          <a class="img-link" href={{data.links.web}} target="_blank">details</a>
+        </div>
+        <div>
+                <img class="right-arrow" ng-click="getNextObject()" src="/img/icon-arrow-right.png" alt="arrow-right">
+        </div>
         </div>
 
     </div>
 
-
-
 </section>
-
-
-
-
-
-
-
-
 
 <!-- <section>
     <div class="colors">

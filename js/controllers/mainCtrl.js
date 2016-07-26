@@ -1,5 +1,5 @@
 angular.module('rijksApp')
-.controller('mainCtrl', ['$scope', 'galleryArt', 'mainSvc', function($scope, galleryArt, mainSvc){
+.controller('mainCtrl', ['$scope', 'mainSvc', function($scope, mainSvc){
 
 
 

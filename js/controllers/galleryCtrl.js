@@ -20,7 +20,7 @@ var loaded = false;
 
   $scope.getDetails = function(detail_id){
     mainSvc.getDetails(detail_id).then(function(detailsResponse) {
-    $scope.artDetails = detailsResponse // get details...
+    $scope.artDetails = detailsResponse.artObject // get details...
     console.log($scope.artDetails);
     })
   };
@@ -35,6 +35,7 @@ var loaded = false;
   $scope.getNextObject = function() {
     $scope.currentObj++;
     console.log('hitme');
+    // add logic to not increment if reached end of array
 
     $scope.current = $scope.artObjects[$scope.currentObj];
   }

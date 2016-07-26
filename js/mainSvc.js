@@ -3,15 +3,16 @@ angular.module('rijksApp')
         var apiKey = 'L0ObQ3Xi';
         var baseUrl = 'https://www.rijksmuseum.nl/api/en/collection';
         var format = '&format=json';
-        var hexEncoded = '%23FF000';
-        var colorParam = '&f.normalized32Colors.hex=' + hexEncoded;
+        var toppieces = '&toppieces=True';
+        // var hexEncoded = '%23FF000';
+        // var colorParam = '&f.normalized32Colors.hex=' + hexEncoded;
         // Colors found in the images (mind: The `#` in #FF0000 should be url-encoded! change # to %23)
         var imgParam = '&imgonly=True';
         // var sortParam = ['s=relevance', 's=objecttype', 's=chronologic', 's=achronologic', 's=artist'];
         var detailsParam = '';
         // GET /api/en/collection/[object-number]
 
-        var api = 'https://www.rijksmuseum.nl/api/en/collection' + detailsParam + '?key=' + apiKey + format + imgParam
+        var api = 'https://www.rijksmuseum.nl/api/en/collection' + detailsParam + '?key=' + apiKey + format + imgParam + toppieces
 
         this.getArt = function() {
           console.log('service hit');
@@ -22,7 +23,7 @@ angular.module('rijksApp')
                 // this callback will be called asynchronously
                 // when the response is available
                 // console.log(response);
-                // console.log(response.data);
+                console.log(api);
                 return response.data;
             }, function errorCallback(err) {
                 // called asynchronously if an error occurs

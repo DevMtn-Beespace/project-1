@@ -2,7 +2,7 @@ angular.module('rijksApp')
 .directive('artObjectDirective', [function(){
 
 
-  return{
+  return {
     scope: {
       data: '=',
       current: '=',
@@ -11,10 +11,11 @@ angular.module('rijksApp')
       getDetails: '='
     },
     templateUrl: "./directives/artObjectTemplate.html" ,
-    restrict: "E",
+    restrict: "EA",
     link: function(scope, elements, attr) {
       console.log('link hit');
     }
-  };
+      // logic to hide details of previous item
+  }
 
 }]);
